@@ -104,6 +104,6 @@ public class App extends Plugin {
         ProxyServer.getInstance().getPluginManager().registerCommand(this, new CommandCMD("smsg"));
         ProxyServer.getInstance().getPluginManager().registerCommand(this, new CommandCMD("sm"));
         ProxyServer.getInstance().getPluginManager().registerCommand(this, new CMDStaff("msgbstaff"));
-        ProxyServer.getInstance().getPluginManager().registerCommand(this, new RetourCMD("rm"));
+        ProxyServer.getInstance().getPluginManager().registerCommand(this, new RetourCMD("sr"));
     }
 }
