@@ -31,7 +31,9 @@ public class RetourCMD extends Command implements TabExecutor {
         String Nojoueurrb = ChatColor.translateAlternateColorCodes('&',
                 App.getinstance().messages.getString("Messages.NoJoueurTrouver.rb").replace("%prefixrb%", prefixrb));
 
-        String s = ((ProxiedPlayer) sender).getServer().getInfo().getName();
+        final var serverInfo = ((ProxiedPlayer) sender).getServer().getInfo();
+        String s = serverInfo.getName();
+        String serverName = serverInfo.getMotd();
 
         if (sender.hasPermission(permrb)) {
             if (App.server.contains(s)) {
@@ -53,11 +55,11 @@ public class RetourCMD extends Command implements TabExecutor {
                 message = ChatColor.stripColor(ChatColor.translateAlternateColorCodes('&', message.trim()));
 
                 String rbenvoyer = ChatColor.translateAlternateColorCodes('&',
-                        App.getinstance().messages.getString("Messages.Formats.rb.Envoyer").replace("%server%", s)
+                        App.getinstance().messages.getString("Messages.Formats.rb.Envoyer").replace("%server%", serverName)
                                 .replace("%player%", target.getName()).replace("%msg%", message)
                                 .replace("%sender%", sender.getName()).replace("%prefixrb%", prefixrb));
                 String rbrecu = ChatColor.translateAlternateColorCodes('&',
-                        App.getinstance().messages.getString("Messages.Formats.rb.Recu").replace("%server%", s)
+                        App.getinstance().messages.getString("Messages.Formats.rb.Recu").replace("%server%", serverName)
                                 .replace("%sender%", sender.getName()).replace("%msg%", message)
                                 .replace("%player%", target.getName()).replace("%prefixrb%", prefixrb));
 
