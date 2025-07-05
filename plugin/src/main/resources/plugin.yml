@@ -1,0 +1,4 @@
+name: "StelyPrivateMessage"
+version: "${version}"
+author: "Flowsqy"
+main: "fr.stelycube.stelyprivatemessage.StelyPrivateMessagePlugin"
