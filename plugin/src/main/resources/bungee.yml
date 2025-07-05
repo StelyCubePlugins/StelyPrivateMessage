@@ -1,0 +1,4 @@
+name: "StelyPrivateMessage"
+version: "${version}"
+author: "LightMute"
+main: "fr.stelycube.stelyprivatemessage.App"
